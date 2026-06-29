@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Glassmorphism Card */
+.card {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+/* Heading */
+.card h1 {
+  margin-bottom: 20px;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.search-box button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #00c6ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #0072ff;
+}
+
+/* Weather Result */
+#temp {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.extra {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.extra div {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 10px;
+  width: 45%;
+}
+
+/* Hidden + Error */
+.hidden {
+  display: none;
+}
+
+.error {
+  color: #ff6b6b;
+  margin-top: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+  .card {
+    padding: 20px;
+  }
+
+  #temp {
+    font-size: 32px;
+  }
+}
